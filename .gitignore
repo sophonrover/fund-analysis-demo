@@ -1,0 +1,5 @@
+# 敏感配置文件（config.js 已清理敏感信息，可提交）
+.env
+node_modules/
+*.log
+.DS_Store
