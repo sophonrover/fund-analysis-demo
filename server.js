@@ -2,6 +2,7 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -11,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // 托管静态文件
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // TTFund Skill 网关地址
 const TTFUND_GATEWAY = 'https://skills.tiantianfunds.com/ai-smart-skill-service/openapi/skill/invoke';
